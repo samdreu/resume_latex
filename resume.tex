@@ -23,9 +23,9 @@
 
 %----------FONT OPTIONS----------
 % sans-serif
-% \usepackage[sfdefault]{FiraSans}
+ %\usepackage[sfdefault]{FiraSans}
 % \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
+ \usepackage[sfdefault]{noto-sans}
 % \usepackage[default]{sourcesanspro}
 
 % serif
@@ -71,10 +71,19 @@
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \textbf{#1} \textit{\small#2} & \small{#4}\\
+      \textit{\small#3} \\
     \end{tabular*}\vspace{-7pt}
 }
+
+\newcommand{\resumeJob}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} \textit{\small#2}& \small{#4} \\
+      \textit{#3} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
@@ -86,7 +95,7 @@
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
+      \small#1 & \small#2 \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -112,10 +121,10 @@
 % \end{tabular*}
 
 \begin{center}
-    \textbf{\Huge \scshape Jake Ryan} \\ \vspace{1pt}
-    \small 123-456-7890 $|$ \href{mailto:x@x.com}{\underline{jake@su.edu}} $|$ 
-    \href{https://linkedin.com/in/...}{\underline{linkedin.com/in/jake}} $|$
-    \href{https://github.com/...}{\underline{github.com/jake}}
+    \textbf{\Huge  Samantha Dreussi} \\ \vspace{1pt}
+    \small (615) 513-7303 $|$ \href{mailto:x@x.com}{\underline{samdreussi@me.com}} %$|$ 
+    %\href{https://linkedin.com/in/...}{\underline{linkedin.com/in/jake}} $|$
+    %\href{https://github.com/...}{\underline{github.com/jake}}
 \end{center}
 
 
@@ -123,11 +132,11 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Southwestern University}{Georgetown, TX}
-      {Bachelor of Arts in Computer Science, Minor in Business}{Aug. 2018 -- May 2021}
+      {University of Washington}{Seattle, WA}
+      {PhD in Computer Science and Engineering}{Sept. 2024}
     \resumeSubheading
-      {Blinn College}{Bryan, TX}
-      {Associate's in Liberal Arts}{Aug. 2014 -- May 2018}
+      {Purdue University}{West Lafayette, IN}
+      {BS in Computer Engineering}{Aug. 2020 -- December 2023}
   \resumeSubHeadingListEnd
 
 
@@ -135,13 +144,13 @@
 \section{Experience}
   \resumeSubHeadingListStart
 
-    \resumeSubheading
-      {Undergraduate Research Assistant}{June 2020 -- Present}
-      {Texas A\&M University}{College Station, TX}
+    \resumeJob
+      {University of Washington}{Seattle, WA}
+      {Teaching Assistant}{Sept. 2024 -- Present}
       \resumeItemListStart
-        \resumeItem{Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems}
-        \resumeItem{Developed a full-stack web application using Flask, React, PostgreSQL and Docker to analyze GitHub data}
-        \resumeItem{Explored ways to visualize GitHub collaboration in a classroom setting}
+        \resumeItem{Lead recitation sections to help students understand course materials and answer questions}
+        \resumeItem{Develop exam questions to test understanding and grade said questions while providing feedback}
+        \resumeItem{Host office hours to help students one on one with their code and answer any questions they have about course materials}
       \resumeItemListEnd
       
 % -----------Multiple Positions Heading-----------
@@ -154,26 +163,14 @@
 %    \resumeSubHeadingListEnd
 %-------------------------------------------
 
-    \resumeSubheading
-      {Information Technology Support Specialist}{Sep. 2018 -- Present}
-      {Southwestern University}{Georgetown, TX}
+    \resumeJob
+      {Intel Corporation}{Austin, TX}
+      {Verification Intern}{June 2023 -- Aug. 2023}
       \resumeItemListStart
-        \resumeItem{Communicate with managers to set up campus computers used on campus}
-        \resumeItem{Assess and troubleshoot computer problems brought by students, faculty and staff}
-        \resumeItem{Maintain upkeep of computers, classroom equipment, and 200 printers across campus}
+        \resumeItem{Wrote unit tests validating the operation of instructions for an x86 processor using tools such as test generators}
+        \resumeItem{Made program that decodes the test output for the CPUID and MSR instructions based of instruction specifications using regular expressions }
+        \resumeItem{Created remote test runner let a user request for tests to be ran on a machine through Jenkins and them receive the test results once the test has completed using Python multi-threading and an artifactory}
     \resumeItemListEnd
-
-    \resumeSubheading
-      {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
-      {Southwestern University}{Georgetown, TX}
-      \resumeItemListStart
-        \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
-        \resumeItem{Developed a game in Java to test the generated dungeons}
-        \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
-        \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
-        \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
-        \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
-      \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
@@ -182,36 +179,64 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Gitlytics} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
+          {\textbf{Golf Simulator} $|$ \emph{C, Python}}{Aug. 2023 -- Dec. 2023}
           \resumeItemListStart
-            \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
-            \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
-            \resumeItem{Visualized GitHub data to show collaboration}
-            \resumeItem{Used Celery and Redis for asynchronous tasks}
+            \resumeItem{Developed a golf simulator consisting of two PCBs with a microcontroller, IMU, Bluetooth module, and power convertor on them inside a 3D printed golf ball with a team of 4}
+            \resumeItem{Wrote code to communicate between the microcontroller and Bluetooth module on the PCB using UART and the code to communicate between the Bluetooth module and laptop and process the data received}
+            \resumeItem{Researched and calculated necessary equations needed to transform IMU data into graphs of the ball's projected trajectory}
+            \resumeItem{Ordered components for the design based off of necessary specifications and soldered the parts onto the PCB}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
+          {\textbf{Multicore Pipelined MIPS Processor} $|$ \emph{System Verilog}}{Jan. 2023 -- May 2023}
           \resumeItemListStart
-            \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
-            \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
-            \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
-            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
+            \resumeItem{Worked in team of two to develop a multicore pipelined MIPS processor with caches in System Verilog }
+            \resumeItem{Tested processor with ASM unit tests and System Verilog tests using QuestaSim to view the waveforms }
           \resumeItemListEnd
+       \resumeProjectHeading
+          {\textbf{Purdue SoCET Design Flow Project}}{Jan. 2022 -- May 2022}
+          \resumeItemListStart
+            \resumeItem{Completed design flow process including synthesis and place and route for timer module in AFTx06 RISCV system on chip design}
+          \resumeItemListEnd
+
     \resumeSubHeadingListEnd
 
+% Research Experience
+\section{Research Experience}
+  \resumeSubHeadingListStart
+    \resumeJob
+      {Paul G. Allen School of Computer Science and Engineering}{Seattle, WA}
+      {Doctoral Researcher, Advisor: Mark Oskin}{Sept. 2024 -- Present}
+      \resumeItemListStart
+        \resumeItem{Developed a simulator for a hardware work stealing task queue mechanism to determine the viability of the idea with a partner}
+        \resumeItem{Researching the ability of LLMs to generate code for obscure algorithms with various techniques such as multithreaded, CUDA, and hardware accelerator implementations}
+      \resumeItemListEnd
 
+  \resumeSubHeadingListEnd
+
+% Honors
+\section{Awards and Honors}
+\begin{itemize}[leftmargin=0.15in, label={}]
+   \small{\item{
+       \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l r@{}}
+           \textbf{McDonnell Douglas Diversity Scholarship} & {\small Aug. 2023} \\
+           \textbf{Stephen J. Woods Memorial Scholarship} & {\small Aug. 2023} \\
+           \textbf{Eli Shay ROTC Electrical Engineering Scholarship} & {\small Aug. 2023} \\
+           \textbf{Purdue Presidential Scholarship} & {\small Aug. 2020 - Dec. 2023} \\
+       \end{tabular*}
+   }}
+\end{itemize}
 
 %
 %-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R} \\
-     \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
-     \textbf{Developer Tools}{: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
-     \textbf{Libraries}{: pandas, NumPy, Matplotlib}
-    }}
- \end{itemize}
+%\section{Technical Skills}
+ %\begin{itemize}[leftmargin=0.15in, label={}]
+ %   \small{\item{
+%     \textbf{Languages}{: Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R} \\
+%     \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
+%     \textbf{Developer Tools}{: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
+%     \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+%    }}
+% \end{itemize}
 
 
 %-------------------------------------------
